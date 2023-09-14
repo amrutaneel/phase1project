@@ -15,9 +15,9 @@ public class FileMenu {
         String[] fileNames = currentDirectory.list();
         String con;
         do {
-            System.out.println("1: Display all files present in the current directory in ascending order.");
-     
-			System.out.println("2:Sub Option");
+        	System.out.println("Virtual Key : Created By Amruta Neel!");
+            System.out.println("1:Display all files present in the current directory in ascending order.");
+            System.out.println("2:Sub Option");
 			System.out.println("3:Exit");
 			System.out.println("Plz enter your choice");
 			int choice = scanner.nextInt();
@@ -37,7 +37,7 @@ public class FileMenu {
 			con = scanner.next();
 			
 			try {
-			if(!con.equals("y") || !con.equals("n")) {
+			if(!con.equals("y") && !con.equals("n")) {
 				throw new ProperOptionValue("Plz enter Y or N");
 			}
 			}catch(Exception e) {
