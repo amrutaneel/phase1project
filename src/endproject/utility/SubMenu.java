@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+import endproject.FileMenu;
+
 public class SubMenu {
 	
 	public static void subMenuOptions() throws Exception{
@@ -12,15 +14,17 @@ public class SubMenu {
 	  
 		System.out.println("Welcome to Sub Options");
 		
-        while (true) {
+        boolean d = false;
+		while (!d ) {
         	System.out.println("2: Sub Menu Options");
             System.out.println("   a: Create a new file");
             System.out.println("   b: Delete a file");
             System.out.println("   c: Check if a file exists");
             System.out.println("   d: Exit sub menu");
+            System.out.print("Enter your choice: ");
             Scanner scanner = new Scanner(System.in);
             char choice = scanner.next().charAt(0);
-            System.out.print("Enter your choice: ");
+           
             
            
 			switch (choice) {
@@ -66,23 +70,25 @@ public class SubMenu {
                 }
                 break;
             case 'd':
-                // Exit sub menu
-                break;
-            
+          d = true;
+          System.out.println("you have exited from submenu.");
+              break;
+       
             default:
                 System.out.println("Invalid choice.");
                 
         }
+		
         }
     
 	}
 
-	private static void addFile(String addFileName) {
-		// TODO Auto-generated method stub
+	
+		
 		
 	}
 
 		
-	}
+	
 
 
